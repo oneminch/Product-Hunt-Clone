@@ -1,0 +1,647 @@
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   font-family: sans-serif;
+   transition: .3s;
+   outline: none;
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+}
+
+body {
+   max-width: 960px;
+   margin: 0 auto;
+}
+
+label {
+   font-weight: bold;
+}
+
+/* To prevent iOS default zooming on focus */
+input,
+textarea {
+   font-size: 16px;
+}
+
+header {
+   margin: 15px 0;
+   height: 40px;
+   padding: 0 15px;
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header>* {
+   height: 40px;
+   text-align: center;
+}
+
+header>* img {
+   margin: 0 auto;
+}
+
+header .logo {
+   margin: 0 auto;
+}
+
+header .logo img {
+   height: 40px;
+}
+
+header .menu {
+   display: none;
+   border-radius: 5px;
+   width: 40px;
+   box-sizing: border-box;
+   cursor: pointer;
+   border: 2px solid #9554fc;
+}
+
+nav {
+   margin: 15px 0;
+}
+
+nav li:first-child img {
+   width: auto;
+   height: 40px;
+}
+
+nav ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+}
+
+nav li {
+   width: 100px;
+   height: 40px;
+   margin: 0;
+   float: left;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+nav li a {
+   color: #000;
+   font-weight: bold;
+   width: 100%;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+nav li:hover a {
+   color: #9554fc;
+   transform: scale(1.15);
+}
+
+footer {
+   text-align: center;
+   padding: 15px;
+}
+
+footer p {
+   margin: 10px 0;
+}
+
+footer p:first-child {
+   color: #ccc;
+}
+
+section {
+   width: 90%;
+   margin: 0px auto;
+   padding: 25px;
+}
+
+@media(max-width: 960px) {
+   nav ul {
+      padding: 0 15px;
+   }
+}
+
+/* ------------------- Home Page CSS Below ------------------- */
+.search-container {
+   width: 100%;
+   min-width: 350px;
+   height: 40px;
+   margin: 20px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.search-container form {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.search-container input {
+   height: 40px;
+   border-radius: 5px;
+   border: 2px solid #ccc;
+}
+
+.search-container input[type="text"] {
+   width: calc(100% - 125px);
+   text-indent: 25px;
+}
+
+.search-container input[type="text"]:focus {
+   border: 2px solid #9554fc;
+}
+
+.search-container input[type="submit"] {
+   width: 100px;
+   cursor: pointer;
+   box-sizing: content-box;
+   border: 2px solid #9554fc;
+   background-color: #9554fc;
+   color: #fff;
+}
+
+.product-list {
+   width: 100%;
+   min-width: 350px;
+   height: auto;
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   padding: 20px;
+   box-sizing: border-box;
+   position: relative;
+   top: 20px;
+}
+
+.sort-form {
+   width: 80px;
+   height: 30px;
+   position: absolute;
+   box-sizing: content-box;
+   border-radius: 15px;
+   top: -15px;
+   left: calc(50% - 40px);
+}
+
+.sort-form input {
+   color: #ffffff;
+   font-size: .8rem;
+   background-color: #000;
+   cursor: pointer;
+   width: 100%;
+   height: 30px;
+   border-radius: 15px;
+   border: none;
+}
+
+.product {
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   padding-bottom: 15px;
+   margin-bottom: 15px;
+   border-bottom: 2px solid #e4e4e4;
+}
+
+.product:last-child {
+   margin-bottom: 0px;
+   border-bottom: none;
+}
+
+.product>* {
+   margin: 5px 10px;
+}
+
+.product .product-logo {
+   width: 50px !important;
+   height: 50px;
+   display: block;
+   border-radius: 5px;
+   object-fit: cover;
+}
+
+.product .product-info {
+   line-height: 1.5;
+}
+
+.product .product-info p {
+   color: #525252;
+}
+
+.product .product-info a {
+   color: #868686;
+   text-decoration: underline;
+}
+
+/* ------------------- About Page CSS Below ------------------- */
+
+.about-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.about-section h1 {
+   width: 50%;
+   margin: 50px auto;
+   text-align: center;
+}
+
+.about-section a {
+   width: 100px;
+   height: 40px;
+   color: #fff;
+   background-color: #9554fc;
+   display: block;
+   margin: 50px auto;
+   text-align: center;
+   border-radius: 5px;
+   cursor: pointer;
+   border: 2px solid #9554fc;
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.mission {
+   width: 100%;
+   background-color: rgba(84, 161, 255, 0.15);
+   padding: 15px;
+   border-radius: 5px;
+}
+
+.mission h3 {
+   margin: 15px auto;
+   text-align: center;
+}
+
+.mission p {
+   width: 75%;
+   margin: 15px auto;
+   text-align: justify;
+   line-height: 1.5;
+}
+
+/* ------------------- Contact Page CSS Below ------------------- */
+
+.contact-section h1 {
+   width: 50%;
+   margin: 30px auto;
+   text-align: center;
+}
+
+.contact-section .container {
+   min-width: 300px;
+   display: flex;
+   justify-content: space-between;
+   align-items: start;
+}
+
+.contact-section .sides {
+   width: 45%;
+}
+
+hr {
+   display: none;
+}
+
+.contact-section .left * {
+   width: 100%;
+   margin: 5px 0;
+}
+
+.contact-section .left .err-msg-hidden {
+   display: none;
+}
+
+.contact-section .left .err-msg-shown {
+   display: flex;
+   height: 40px;
+   background-color: #eb4d4b;
+   font-weight: bold;
+   color: #ffffff;
+   align-items: center;
+   text-align: center;
+   border-radius: 5px;
+}
+
+.contact-section .left input {
+   height: 40px;
+   border: 2px solid #ccc;
+   text-indent: 10px;
+   border-radius: 5px;
+   font-size: 16px;
+   box-sizing: border-box;
+}
+
+.contact-section .left textarea {
+   height: 120px;
+   border: 2px solid #ccc;
+   padding: 10px;
+   box-sizing: border-box;
+   border-radius: 5px;
+   font-size: 16px;
+   resize: none;
+}
+
+.contact-section .left input:focus,
+.contact-section .left textarea:focus {
+   border: 2px solid #9554fc;
+}
+
+.contact-section .left input[type="submit"] {
+   width: 100px;
+   text-indent: 0px;
+   border-radius: 5px;
+   border: 2px solid #9554fc;
+   color: #fff;
+   background-color: #9554fc;
+   cursor: pointer;
+}
+
+.contact-section .right .wrapper {
+   border-radius: 5px;
+   padding: 10px 15px;
+   border: 2px solid #ccc;
+}
+
+.contact-section .right .wrapper * {
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.contact-section .right .wrapper img {
+   border-radius: 5px;
+   height: 200px;
+   object-fit: cover;
+}
+
+/* ------------------- Submit Page CSS Below ------------------- */
+
+.submit-section h1 {
+   width: 50%;
+   margin: 45px auto;
+   text-align: center;
+}
+
+.submit-section .container {
+   min-width: 300px;
+   display: flex;
+   justify-content: space-between;
+   align-items: start;
+}
+
+.submit-section .sides {
+   width: 45%;
+}
+
+.submit-section .left * {
+   width: 100%;
+   margin: 5px 0;
+}
+
+.submit-section .sides input {
+   height: 40px;
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+   box-sizing: border-box;
+   padding: 0 10px;
+}
+
+.submit-section .left textarea {
+   height: 120px;
+   border: 2px solid #ccc;
+   padding: 10px;
+   box-sizing: border-box;
+   border-radius: 5px;
+   font-size: 16px;
+   resize: none;
+}
+
+.submit-section .sides input:focus,
+.submit-section .sides textarea:focus {
+   border: 2px solid #9554fc;
+}
+
+.submit-section .left input[type="submit"] {
+   width: 100px;
+   border-radius: 5px;
+   border: 2px solid #9554fc;
+   color: #fff;
+   background-color: #9554fc;
+   cursor: pointer;
+}
+
+.submit-section .right {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+.submit-section .right input {
+   width: 75%;
+}
+
+.submit-section .right img {
+   display: block;
+   border-radius: 5px;
+   margin: 15px 0;
+}
+
+.submit-section .right input[type="file"] {
+   margin: 5px 0;
+   cursor: pointer;
+}
+
+.status-msg {
+   display: flex;
+   height: 40px;
+   font-weight: bold;
+   color: #ffffff;
+   align-items: center;
+   text-align: center;
+   border-radius: 5px;
+}
+
+.status-msg p {
+   width: 100%;
+}
+
+/* ------------------- 404 Page CSS Below ------------------- */
+
+.lost-section {
+   text-align: center;
+   margin: 50px auto;
+}
+
+.lost-section h1 {
+   width: 100%;
+   box-sizing: border-box;
+   font-size: 8em;
+}
+
+.lost-section h2 {
+   font-size: 2em;
+   box-sizing: border-box;
+}
+
+.lost-section a {
+   width: 100px;
+   height: 40px;
+   color: #fff;
+   background-color: #9554fc;
+   display: block;
+   margin: 50px auto;
+   text-align: center;
+   border-radius: 5px;
+   cursor: pointer;
+   border: 2px solid #9554fc;
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* ====================== Responsive CSS Below ====================== */
+
+
+@media(max-width: 640px) {
+
+   /* ----- Navigation ----- */
+   header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   header .logo {
+      margin: 0;
+   }
+
+   header .menu {
+      display: inline-flex;
+   }
+
+   nav ul {
+      display: none;
+   }
+
+   .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #9554fc;
+      padding: 10px 0;
+   }
+
+   /* ----- Home Page ----- */
+   .product-list {
+      padding: 10px;
+   }
+
+   .product:last-child {
+      margin-bottom: 0px;
+      border-bottom: none;
+   }
+
+   .product>* {
+      margin: 5px;
+   }
+
+   .product .product-logo {
+      width: 40px;
+      height: 40px;
+   }
+
+   .product .product-info {
+      line-height: 1.2;
+
+   }
+
+   /* ----- About Page ----- */
+   .about-section {
+      padding: 10px 0px;
+   }
+
+   .about-section h1 {
+      width: 80%;
+   }
+
+   .mission {
+      padding: 10px;
+   }
+
+   .about-section p {
+      width: 90%;
+   }
+
+   /* ----- Contact Page ----- */
+   .contact-section h1 {
+      width: 80%;
+   }
+
+   .contact-section .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .contact-section .sides {
+      width: 100%;
+   }
+
+   hr {
+      width: 75%;
+      margin: 25px auto;
+      display: block;
+      border: 1px solid #ccc;
+   }
+
+   .contact-section .left input[type="submit"] {
+      width: 100%;
+   }
+
+   /* ----- Submit Page ----- */
+   .submit-section h1 {
+      width: 80%;
+   }
+
+   .submit-section .container {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .submit-section .sides {
+      width: 100%;
+   }
+
+   .submit-section .left input[type="submit"] {
+      width: 100%;
+   }
+
+   .submit-section .right {
+      width: 100%;
+      align-items: start;
+      margin-bottom: 15px;
+   }
+
+   .submit-section .right img {
+      display: none;
+   }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel='icon' href='public/images/favicon.ico' type='image/x-icon' />
+   <link rel="stylesheet" href="public/css/style.css">
+   <title>Home | Discover&Share</title>
+</head>
+
+<body>
+   <header>
+      <div class="logo">
+         <a href="/">
+            <img src="public/images/logo.png" alt="Logo">
+         </a>
+      </div>
+      <div class="menu menu-btn">
+         <img src="public/images/menu.svg" class="menu-btn" alt="Menu Icon">
+      </div>
+   </header>
+   <nav>
+      <ul>
+         <li class="navbar-items"><a class="home" href="/">Home</a></li>
+         <li class="navbar-items"><a class="about" href="/about">About</a></li>
+         <li class="navbar-items"><a class="contact" href="/contact">Contact</a></li>
+         <li class="navbar-items submit">
+            <a href="/submit">
+               <p>Submit</p>
+            </a>
+         </li>
+      </ul>
+   </nav>
+   <section class="home-section">
+      <div class="search-container">
+         <form action="/search_products" method="post">
+            <input type="text" placeholder="Enter the name of product" name="search_query" required>
+            <input type="submit" value="Search">
+         </form>
+      </div>
+      <!-- Product list -->
+      <div class="product-list">
+         <form class="sort-form" action="/sort_products" method="post">
+            <input type="submit" value="Sort (A-Z)" class="sort-input">
+         </form>
+         {{{ msg }}} {{!-- Message to show when there are no items with specified search query --}}
+
+         {{#each data}} {{!-- Loops through data values and renders them as a list --}}
+         <div class="product">
+            {{!-- If product has image url, display it. If not, display placeholder image --}}
+            {{#if this.ProductImage }}
+            <img class="product-logo" src="{{ this.ProductImage }}" alt="Logo">
+            {{else}}
+            <img class="product-logo" src="https://fakeimg.pl/50" alt="Logo">
+            {{/if}}
+
+            <div class="product-info">
+               <h4>{{ this.ProductName }}</h4>
+               <p>{{ this.ProductDesc }}</p>
+               <a href="{{ this.ProductURL }}" rel="noopener" target="_blank">{{ this.ProductURL }}</a>
+            </div>
+         </div>
+         {{/each}}
+      </div>
+   </section>
+   <footer>
+      <p>This is the home page of Discover&Share. All the products people share are going to be listed here in the time
+         order that they were added. Each product will have a title, a description and a link to its homepage. You can
+         make searches here by providing your query in the search bar located at the top of the list. You can favorite
+         products by clicking on the heart icon at the right of every product, and visit the product homepage by
+         clicking on the link below the product description.</p>
+      <p>&copy; 2020 Discover&Share, Inc. </p>
+      <p>No Rights Reserved.</p>
+   </footer>
+   <script src="public/main.js"></script>
+</body>
+
+</html>

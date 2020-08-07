@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel='icon' href='public/images/favicon.ico' type='image/x-icon' />
+   <link rel="stylesheet" href="public/css/style.css">
+   <title>Contact | Discover&Share</title>
+</head>
+
+<body>
+   <header>
+      <div class="logo">
+         <a href="/">
+            <img src="public/images/logo.png" alt="Logo">
+         </a>
+      </div>
+      <div class="menu menu-btn">
+         <img src="public/images/menu.svg" class="menu-btn" alt="Menu Icon">
+      </div>
+   </header>
+   <nav>
+      <ul>
+         <li class="navbar-items"><a class="home" href="/">Home</a></li>
+         <li class="navbar-items"><a class="about" href="/about">About</a></li>
+         <li class="navbar-items"><a class="contact" href="/contact">Contact</a></li>
+         <li class="navbar-items submit">
+            <a href="/submit">
+               <p>Submit</p>
+            </a>
+         </li>
+      </ul>
+   </nav>
+   <section class="contact-section">
+      <h1>Have any questions or feedback? Contact Us 👋</h1>
+      <div class="container">
+         <!-- Contact form container -->
+         <div class="sides left">
+            <form>
+               <div class="err-msg err-msg-hidden">
+                  <p>Please fill out all the fields.</p>
+               </div>
+               <div>
+                  <label for="name">Full Name</label>
+                  <br>
+                  <input type="text" placeholder="John Doe" class="contact-inputs" id="name">
+               </div>
+               <div>
+                  <label for="email">Email Address</label>
+                  <br>
+                  <input type="email" placeholder="someone@example.com" class="contact-inputs" id="email">
+               </div>
+               <div>
+                  <label for="message">Message</label>
+                  <br>
+                  <textarea placeholder="Enter your message..." class="contact-inputs" id="message" cols="30"
+                     rows="10"></textarea>
+               </div>
+               <input type="submit" value="Send" class="contact-submit">
+            </form>
+         </div>
+         <hr>
+         <!-- Physical address -->
+         <div class="sides right">
+            <div class="wrapper">
+               <img src="public/images/office.jpg" alt="Office Picture">
+               <h3>Our Fancy Office</h3>
+               <p>21 Eastway Dr. <br> Suite 45 <br> Somewhere, Planet Earth</p>
+               <p><b>Phone</b>: (123)456-7890 <br> <b>Email</b>: contact@email.com</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <footer>
+      <p>This is the contact page of Discover&Share. It contains a form that allows users to send us a message. It also
+         contains our physical address. In case you love our app so much that you decide to visit with a box full of
+         donuts. Disclaimer: Emptyhanded visitors not welcome.</p>
+      <p>&copy; 2020 Discover&Share, Inc. </p>
+      <p>No Rights Reserved.</p>
+   </footer>
+   <script src="public/main.js"></script>
+</body>
+
+</html>

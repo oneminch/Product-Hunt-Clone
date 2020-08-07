@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="public/css/style.css" />
+	<title>Submit | Discover&Share</title>
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="/">
+				<img src="public/images/logo.png" alt="Logo" />
+			</a>
+		</div>
+		<div class="menu menu-btn">
+			<img src="public/images/menu.svg" class="menu-btn" alt="Menu Icon" />
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li class="navbar-items"><a class="home" href="/">Home</a></li>
+			<li class="navbar-items">
+				<a class="about" href="/about">About</a>
+			</li>
+			<li class="navbar-items">
+				<a class="contact" href="/contact">Contact</a>
+			</li>
+			<li class="navbar-items submit">
+				<a href="/submit">
+					<p>Submit</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="submit-section">
+		<h1>Enter the Details of the Product You Want to Share 📱</h1>
+		<form method="POST" action="add_product">
+			<div class="container">
+
+				<!-- Submission Form Container -->
+				<div class="sides left">
+					{{{ msg }}} {{!--  Show success/error message when a product is submitted --}}
+					{{!-- <form method="POST" action="add_product"> --}}
+					<div>
+						<label for="productName">Name of Product</label>
+						<br />
+						<input type="text" placeholder="DuckDuckGo" name="name" required />
+					</div>
+					<div>
+						<label for="url">URL</label>
+						<br />
+						<input type="url" placeholder="https://duckduckgo.com" name="url" value="https://" required />
+					</div>
+					<div>
+						<label for="description">Description</label>
+						<br />
+						<textarea placeholder="DuckDuckGo is a private search engine..." value="Some text" name="description"
+							maxlength="180" cols="30" rows="10"></textarea>
+					</div>
+					<input type="submit" value="Submit" />
+					{{!-- </form> --}}
+				</div>
+				<!-- Upload Product Icon Image -->
+				<div class="sides right">
+					<h3>Product Logo</h3>
+					<img src="https://fakeimg.pl/200/" alt="Placeholder Image" />
+					<label for="img_url">Please Upload Image URL</label>
+					<input type="url" name="img_url" placeholder="URL to Product Logo" />
+				</div>
+
+			</div>
+		</form>
+	</section>
+	<footer>
+		<p>
+			This is the product submission page of Discover&Share. Anyone can
+			submit a new product by providing its name, url to its homepage and
+			its description. The product's logo can also be uploaded. If not
+			uploaded, a web crawler can find the logo or I will end up using a
+			random SVG generator to add an icon to the product. The values will
+			be written to the database are going to be loaded to the homepage on
+			the next visit.
+		</p>
+		<p>&copy; 2020 Discover&Share, Inc.</p>
+		<p>No Rights Reserved.</p>
+	</footer>
+	<script src="public/main.js"></script>
+</body>
+
+</html>
