@@ -1,11 +1,11 @@
 {
-	"name": "Discover-n-Share",
+	"name": "discover-n-share",
 	"version": "1.0.0",
 	"description": "An app to discover and share favorite products.",
-	"main": "responsive.js",
+	"main": "app.js",
 	"scripts": {
-		"start": "node responsive.js",
-		"dev": "nodemon responsive.js"
+		"start": "node app.js",
+		"dev": "nodemon app.js"
 	},
 	"keywords": [
 		"mysql",
@@ -21,7 +21,8 @@
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
 		"express-handlebars": "^5.1.0",
-		"mysql": "^2.18.1"
+		"mysql": "^2.18.1",
+		"pg": "^8.3.3"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.4"

@@ -49,27 +49,27 @@
          {{#each data}} {{!-- Loops through data values and renders them as a list --}}
          <div class="product">
             {{!-- If product has image url, display it. If not, display placeholder image --}}
-            {{#if this.ProductImage }}
-            <img class="product-logo" src="{{ this.ProductImage }}" alt="Logo">
+            {{#if this.productimage }}
+            <img class="product-logo" src="{{ this.productimage }}" alt="Logo">
             {{else}}
             <img class="product-logo" src="https://fakeimg.pl/50" alt="Logo">
             {{/if}}
 
             <div class="product-info">
-               <h4>{{ this.ProductName }}</h4>
-               <p>{{ this.ProductDesc }}</p>
-               <a href="{{ this.ProductURL }}" rel="noopener" target="_blank">{{ this.ProductURL }}</a>
+               <h4>{{ this.productname }}</h4>
+               <p>{{ this.productdesc }}</p>
+               <a href="{{ this.producturl }}" rel="noopener" target="_blank">{{ this.producturl }}</a>
             </div>
          </div>
          {{/each}}
       </div>
    </section>
    <footer>
-      <p>This is the home page of Discover&Share. All the products people share are going to be listed here in the time
+      {{!-- <p>This is the home page of Discover&Share. All the products people share are going to be listed here in the time
          order that they were added. Each product will have a title, a description and a link to its homepage. You can
          make searches here by providing your query in the search bar located at the top of the list. You can favorite
          products by clicking on the heart icon at the right of every product, and visit the product homepage by
-         clicking on the link below the product description.</p>
+         clicking on the link below the product description.</p> --}}
       <p>&copy; 2020 Discover&Share, Inc. </p>
       <p>No Rights Reserved.</p>
    </footer>

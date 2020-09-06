@@ -1,5 +1,5 @@
 // ===========================================================================
-// 0 - JavaScript to handle display of navigation items in mobile view
+// 0 - JavaScript to handle display of navigation items in mobile view & footer date
 // ===========================================================================
 
 const navBar = document.querySelector("nav ul"); // Navigation List Container
@@ -19,6 +19,10 @@ document.body.addEventListener(
 	},
 	true
 );
+
+document.querySelector(
+	"footer p"
+).innerHTML = `&copy; ${new Date().getFullYear()} Discover&Share, !nc.`;
 
 // ===========================================================================
 // 1 - JavaScript to make sure the user has entered info in your contact form for
