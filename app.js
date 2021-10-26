@@ -70,7 +70,7 @@ app.get("/", function (req, res) {
 	);
 });
 
-// handles SEARCHING of products
+// Handles SEARCHING of products
 app.post("/search_products", function (req, res) {
 	pool.query(
 		`SELECT * FROM products WHERE productname ILIKE '%${req.body.search_query}%'`,
