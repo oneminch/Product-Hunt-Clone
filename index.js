@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 
 // Create a connection pool using the connection information provided on bit.io.
 const pool = new Pool({
-    user: process.env.USER,
+    user: process.env.USERNAME,
     host: 'db.bit.io',
     database: process.env.DATABASE,
     password: process.env.PASSWORD,
@@ -38,12 +38,6 @@ const pool = new Pool({
       rejectUnauthorized: false,
     },
 });
-
-const clientConfig = {
-	connectionString: process.env.DATABASE_URL,
-};
-
-// let pool = new Pool(clientConfig);
 
 pool.connect();
 
