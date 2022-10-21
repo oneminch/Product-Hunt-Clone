@@ -199,3 +199,5 @@ app.listen(PORT, () => {
 	console.log("Press Ctrl+C to quit.");
 	console.log("");
 });
+
+module.exports = app;

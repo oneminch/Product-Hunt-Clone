@@ -2,3 +2,4 @@
 .deta/
 /node_modules
 *.code-workspace
+.vscode/
