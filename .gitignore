@@ -1,2 +1,4 @@
 .env
+.deta/
 /node_modules
+*.code-workspace

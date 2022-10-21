@@ -23,18 +23,27 @@ app.use(bodyParser.json());
 
 // This will print HTTP request methods live as they happen
 app.use(function (req, res, next) {
-	console.log(`Request –> (Method: ${req.method}, URL: ${req.url})`);
+	console.log(`Request -> (Method: ${req.method}, URL: ${req.url})`);
 	next();
+});
+
+// Create a connection pool using the connection information provided on bit.io.
+const pool = new Pool({
+    user: process.env.USER,
+    host: 'db.bit.io',
+    database: process.env.DATABASE,
+    password: process.env.PASSWORD,
+    port: 5432,
+    ssl: {
+      rejectUnauthorized: false,
+    },
 });
 
 const clientConfig = {
 	connectionString: process.env.DATABASE_URL,
-	ssl: {
-		rejectUnauthorized: false,
-	},
 };
 
-let pool = new Pool(clientConfig);
+// let pool = new Pool(clientConfig);
 
 pool.connect();
 
